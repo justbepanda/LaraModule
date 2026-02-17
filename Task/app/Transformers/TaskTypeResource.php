@@ -1,0 +1,21 @@
+<?php
+
+namespace Modules\Task\Transformers;
+
+use App\Http\Resources\Resource;
+use Illuminate\Http\Request;
+
+class TaskTypeResource extends Resource
+{
+    /**
+     * @param Request $request
+     * @return array
+     */
+    public function toArray(Request $request)
+    {
+        return [
+            'id' => $this->resource->id,
+            'name' => $this->resource->name,
+        ];
+}
+}
